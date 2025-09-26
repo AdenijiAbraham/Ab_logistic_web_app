@@ -1,0 +1,27 @@
+.colum_two_image {
+    overflow: hidden; /* Prevents image from going outside */
+    width: 100%; /* Ensures container maintains proper width */
+    height: auto; /* Adjusts height dynamically */
+}
+
+.colum_two_image img {
+    transition: transform 1s ease-in-out; /* Add transition here */
+    object-fit: cover;
+    width: 100%; /* Ensures image fits container */
+    height: 100%; /* Maintains aspect ratio */
+}
+
+.colum_two_image img:hover {
+    transform: scale(1.1); /* Corrected scaling */
+}
+
+
+
+
+/*  DESKTOP SCREEN */
+
+@media (min-width:1000px){
+   #desktop{
+    margin-top: 20vh;
+   }
+}

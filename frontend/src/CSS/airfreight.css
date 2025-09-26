@@ -1,0 +1,88 @@
+
+.services_content h3{
+    color:#58bed3;;
+}
+
+
+.services_content li{
+    list-style:circle !important
+}
+
+.services_content .accordion-button::after {
+    flex-shrink: 0;
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    margin-left: auto;
+    content: "";
+    background-image: var(--bs-accordion-btn-icon);
+    background-repeat: no-repeat;
+    background-size: var(--bs-accordion-btn-icon-width);
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+.no-arrow::after {
+    display: none !important;
+}
+
+.accordion {
+    --bs-accordion-color: var(--bs-body-color);
+    --bs-accordion-bg: var(--bs-body-bg);
+    --bs-accordion-transition: color 0.15sease-in-out, background-color 0.15sease-in-out, border-color 0.15sease-in-out, box-shadow 0.15sease-in-out, border-radius 0.15sease;
+    --bs-accordion-border-color: var(--bs-border-color);
+    --bs-accordion-border-width: var(--bs-border-width);
+    --bs-accordion-border-radius: var(--bs-border-radius);
+    --bs-accordion-inner-border-radius: calc(var(--bs-border-radius) -(var(--bs-border-width)));
+    --bs-accordion-btn-padding-x: 1.25rem;
+    --bs-accordion-btn-padding-y: 1rem;
+    --bs-accordion-btn-color: var(--bs-body-color);
+    --bs-accordion-btn-bg: var(--bs-accordion-bg);
+    --bs-accordion-btn-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e);
+    --bs-accordion-btn-icon-width: 1.25rem;
+    --bs-accordion-btn-icon-transform: rotate(-180deg);
+    --bs-accordion-btn-icon-transition: transform 0.2sease-in-out;
+    --bs-accordion-btn-active-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e);
+    --bs-accordion-btn-focus-box-shadow:none !important;
+    --bs-accordion-body-padding-x: 1.25rem;
+    --bs-accordion-body-padding-y: 1rem;
+    --bs-accordion-active-color: var(--bs-primary-text-emphasis);
+    --bs-accordion-active-bg: var(--bs-primary-bg-subtle);
+}
+
+
+/* Small Devices (Phones) */
+@media (max-width: 480px) {
+    /* .video_container h1{
+        font-size: 30px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+    .video_container h2{
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 50px;
+    } */
+  }
+
+
+
+  /* Tablets */
+  @media (min-width: 481px) and (max-width: 1024px) {
+    /* .video_container h1{
+        font-size: 50px;
+        font-weight: 600;
+        color: #58bed3;
+    } */
+    
+  } 
+
+
+
+ /* Laptops & Desktops */
+ @media (min-width: 1025px) {
+    /* .video_container h1{
+        font-size: 50px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+     */
+  } 

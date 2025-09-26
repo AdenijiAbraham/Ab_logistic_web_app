@@ -1,0 +1,150 @@
+
+/* mob screen */
+@media (max-width:575px) {
+    #logo{
+        width: 150px;
+        margin: 20px 20px;
+    }
+    #logo2{
+        width: 160px;
+    }
+    #getstarted{
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .icon-container img{
+        width: 20px;
+    }
+    #call{
+        width:33px;
+    }
+    #services{
+        margin-top: 30px;
+    }
+    .sjlogo{
+        position: fixed;
+        top: 70%;
+        left: 90%;
+        background-color: black;
+      }
+      .sjlogo p {
+        font-size: 10px;
+        margin-right: 10px;
+      }
+      .sjlogo img{
+        height: 50px;
+      }
+}
+
+
+
+
+
+
+
+/* tablet screen */
+@media (min-width:576px) and (max-width:900px) {
+    #logo{
+        width: 250px;
+        margin: 50px 200px;
+    }
+    #logo2{
+        width: 160px;
+    }
+    .icon-container img{
+        width: 30px;
+    }
+    #call{
+        width: 43px;
+    }
+    #services{
+        margin-top: 70px;
+    }
+    .sjlogo{
+        position: fixed;
+        top: 70%;
+        left: 80%;
+        background-color: black;
+      }
+      .sjlogo p {
+        font-size: 10px;
+        margin-right: 10px;
+      }
+      .sjlogo img{
+        height: 50px;
+      }
+}
+
+/* desktop screen */
+@media (min-width:901px) {
+    .hero{
+        margin-top: 105px;
+    }
+    #logo{
+        width: 250px;
+        margin: 50px 200px;
+    }
+    #logo2{
+        width: 250px;
+    }
+    .container_lg{
+        padding: 0px 100px;
+    }
+    .nav_items{
+        gap: 50px;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+    .icon-container img{
+        width: 30px;
+    }
+    #call{
+        width: 43px;
+    }
+    .head_text h1{
+        font-size: 70px;
+    }
+    /* .nav-link:hover{
+        color: aqua;
+    } */
+    .navbar-nav .nav-item .nav-link.active {
+        color: #58bed3 !important; /* Change active text color */
+        /* background-color: #f8f9fa !important; */
+        border-radius: 5px; /* Optional: Rounded corners */
+    }
+    @keyframes floatUpDown {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    .icon-container #chatbot {
+        animation: floatUpDown 2s ease-in-out infinite;
+        z-index: 999;
+    }
+    #services{
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    .sjlogo{
+        position: fixed;
+        top: 70%;
+        left: 90%;
+        background-color: black;
+      }
+      .sjlogo p {
+        font-size: 12px;
+        margin-right: 10px;
+      }
+      .sjlogo img{
+        height: 60px;
+      }
+}

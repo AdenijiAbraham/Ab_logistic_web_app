@@ -1,0 +1,232 @@
+
+/* Small Devices (Phones) */
+/* @media (max-width: 480px) {
+    body { background-color: lightblue; }
+  }
+   */
+  /* Tablets */
+  /* @media (min-width: 481px) and (max-width: 1024px) {
+    body { background-color: lightgreen; }
+  } */
+  
+  /* Laptops & Desktops */
+  /* @media (min-width: 1025px) {
+    body { background-color: lightgray; }
+  } */
+ 
+  
+
+  
+
+
+
+
+
+
+
+
+.col{
+    overflow: hidden;
+}
+.col img{
+    height: 380px;
+}
+
+.imgc{
+    transition: transform 500ms ease-out
+}
+.animate_box{
+    overflow: hidden;
+    position: relative;
+}
+.animate_box:hover .imgc {
+    transform: scale(1.5); /* Smooth scaling effect */
+    
+}
+
+.img_hover_div{
+    justify-self: center;
+}
+#services img{
+    position: relative;
+}
+
+@keyframes slideInTop {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #services h1{
+    animation: slideInTop 2.5s ease-out forwards;
+    animation-fill-mode: forwards;
+  }
+  #services p{
+    animation: slideInLeft 2.5s ease-out forwards;
+    animation-fill-mode: forwards;
+  }
+
+  .overlay_text{
+    top: 60px;
+    left: 90px;
+    right: 90px;
+    color: white;
+    display:none;
+    font-size: 19px;
+  }
+  .col:hover .overlay_text{
+    display: inline;
+  }
+
+
+  @keyframes slideInReft {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+.overlay_text i{
+    font-size: 40px;
+}
+
+.text_before_hover{
+    top: 100px;
+    left: 90px;
+    color: white;
+}
+.col:hover .text_before_hover{
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MOBILE */
+
+@media (max-width:575px){
+    #services h1{
+        font-size: 30px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+    #services h2{
+      margin-top: 30px;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+    .img_hover_div {
+        position: absolute;
+        top:0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transition: width 0.8s ease-in-out, height 0.8s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    .col:hover .img_hover_div {
+        background-color: #58bed3c1;
+        top:0;
+        left: 0;
+        opacity: 1;
+        scale:calc(3.2);
+        transition: 1s;
+    }
+}
+
+
+
+
+/* TABLET */
+@media (min-width:576px) and (max-width:999px){
+    #services h1{
+        font-size: 60px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+    #services h2{
+        font-weight: 600;
+       
+    }
+    .img_hover_div {
+      position: absolute;
+      top:0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      transition: width 0.8s ease-in-out, height 0.8s ease-in-out, opacity 0.5s ease-in-out;
+  }
+    .col:hover .img_hover_div {
+        background-color: #58bed3c1;
+        top:85px;
+        left: 100px;
+        opacity: 1;
+        scale:calc(3.2);
+        transition: 1s;
+    }
+}
+
+
+
+
+
+
+
+/*  DESKTOP SCREEN */
+
+@media (min-width:1000px){
+    #services h1{
+        font-size: 60px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+    #services h2{
+        font-weight: 600;
+       
+    }
+    .fs{
+        font-size: 20px;
+    }
+    .img_hover_div {
+        position: absolute;
+        top:100px;
+        left: 120px;
+        width: 120px;
+        height: 110px;
+        position: absolute;
+        opacity: 1;
+        transition: width 0.8s ease-in-out, height 0.8s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    .col:hover .img_hover_div {
+        background-color: #58bed3c1;
+        top:85px;
+        left: 100px;
+        opacity: 1;
+        scale:calc(3.2);
+        transition: 1s;
+    }
+}

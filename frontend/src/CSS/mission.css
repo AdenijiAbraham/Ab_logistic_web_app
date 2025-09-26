@@ -1,0 +1,78 @@
+
+.accordion-button:hover{
+    background-color: #58bed3;
+    color: white;
+    /* background-color: var(--bs-accordion-active-bg); */
+}
+.accordion-button:not(.collapsed) {
+    color: black(--bs-accordion-active-color);
+    background-color: #58bed3(--bs-accordion-active-bg);
+    box-shadow: inset 0 calc(-1* white(--bs-accordion-border-width)) 0 white(--bs-accordion-border-color);
+}
+
+@media (max-width:575px){
+    /* #aboutus h1{
+        font-size: 30px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+    #aboutus h2{
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 50px;
+    } */
+    #mission{
+        margin-top: 50px;
+    }
+    #mission  h1{
+        font-size: 30px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+    #mission h1{
+        font-size: 25px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+    #mission h2{
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 50px;
+    }
+  
+    
+}
+
+
+
+  
+
+
+
+@media (min-width:576px) and (max-width:999px){
+    #mission{
+        margin-top: 80px;
+    }
+    #mission h1{
+        font-size: 30px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+}
+
+
+@media (min-width:1000px) and (max-width:2200px){
+    #mission{
+        margin-top: 50px;
+    }
+    #mission h1{
+        font-size: 50px;
+        font-weight: 600;
+        color: #58bed3;
+    }
+    .accordian_container{
+        padding: 0px 100px;
+    }
+}
