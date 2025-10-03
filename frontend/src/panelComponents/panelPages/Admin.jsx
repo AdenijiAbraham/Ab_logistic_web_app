@@ -1,4 +1,3 @@
-
 // import AllUsers from './AllUsers';
 // import AllVendors from './AllVendors';
 
@@ -7,6 +6,9 @@
 // import EditUser from './EditUser';
 // import EditVendor from './EditVendor';
 // import BlogPost from './BlogPost';
+
+//frontend/src/panelComponents/panelPages/Admin.jsx
+import React from 'react';
 import './admin.css'
 import Dashboard from './Dashboard';
 

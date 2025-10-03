@@ -1,4 +1,6 @@
 // frontend/src/authComponents/AuthRegister.js
+import { auth } from "../firebase/firebase.config";
+
 const isRegister = false;
 const AuthPage = () => {
   const [formData, setFormData] = useState({

@@ -1,10 +1,13 @@
-
+//AOS typically stands for "Animate On Scroll" - a popular JavaScript library 
+// that animates elements as you scroll down a webpage.
 import AOS from "aos";
 import Ab_video_ship from'../../assets/Ab_video_ship.mp4'
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const HeroTwo = () => {
+  const navigate = useNavigate();
     useEffect(() => {
         AOS.init();
       }, []);
@@ -40,7 +43,7 @@ const HeroTwo = () => {
                 <button
                   className="btn btn-primary btn-lg text-center hero-button"
                   id="getstarted" data-aos="fade-right"
-                  
+                  onClick={() => navigate("/register")}
                 >
                   <div className="pb-0 arrow_class text-center justify-content-center d-flex align-items-center gap-2"> Get Started <span><i className="fa-solid fa-chevron-right text-white mb-lg-2 ms-1 arrow_right"></i></span></div> 
                 </button>
@@ -72,6 +75,7 @@ const HeroTwo = () => {
                 <button
                   className="btn btn-primary btn-lg text-center hero-button"
                   id="getstarted"
+                  onClick={() => navigate("/air")}
                 >
                   <div className="pb-0 arrow_class text-center justify-content-center d-flex align-items-center gap-2"> Get Started <span><i className="fa-solid fa-chevron-right text-white mb-lg-2 ms-1 arrow_right"></i></span></div> 
                 </button>
@@ -107,6 +111,7 @@ const HeroTwo = () => {
                 <button
                   className="btn btn-primary btn-lg text-center hero-button hero-button"
                   id="getstarted"
+                  onClick={() => navigate("/ocean")}
                 >
                    <div className="pb-0 arrow_class text-center justify-content-center d-flex align-items-center gap-2"> Get Started <span><i className="fa-solid fa-chevron-right text-white mb-lg-2 ms-1 arrow_right"></i></span></div> 
                 </button>
@@ -139,6 +144,7 @@ const HeroTwo = () => {
                 <button
                   className="btn btn-primary btn-lg text-center hero-button"
                   id="getstarted"
+                  onClick={() => navigate("/road")}
                 >
                   <div className="pb-0 arrow_class text-center justify-content-center d-flex align-items-center gap-2"> Get Started <span><i className="fa-solid fa-chevron-right text-white mb-lg-2 ms-1 arrow_right"></i></span></div> 
                 </button>
@@ -146,8 +152,6 @@ const HeroTwo = () => {
             </section>
           </div>
           
-
-
 
 
 
@@ -176,6 +180,7 @@ const HeroTwo = () => {
                 <button
                   className="btn btn-primary btn-lg text-center hero-button"
                   id="getstarted"
+                  onClick={() => navigate("/cargomarine")}
                 >
                     <div className="pb-0 arrow_class text-center justify-content-center d-flex align-items-center gap-2"> Get Started <span><i className="fa-solid fa-chevron-right text-white mb-lg-2 ms-1 arrow_right"></i></span></div> 
                 </button>
@@ -206,6 +211,7 @@ const HeroTwo = () => {
                 <button
                   className="btn btn-primary btn-lg text-center hero-button"
                   id="getstarted"
+                  onClick={() => navigate("/warehousing")}
                 >
                   <div className="pb-0 arrow_class text-center justify-content-center d-flex align-items-center gap-2"> Get Started <span><i className="fa-solid fa-chevron-right text-white mb-lg-2 ms-1 arrow_right"></i></span></div> 
                 </button>
@@ -236,6 +242,7 @@ const HeroTwo = () => {
                 <button
                   className="btn btn-primary btn-lg text-center hero-button"
                   id="getstarted"
+                  onClick={() => navigate("/customclearnace")}
                 >
                    <div className="pb-0 arrow_class text-center justify-content-center d-flex align-items-center gap-2"> Get Started <span><i className="fa-solid fa-chevron-right text-white mb-lg-2 ms-1 arrow_right"></i></span></div> 
                 </button>

@@ -1,4 +1,5 @@
 // frontend/src/registerLogComponents/LogAsAdmin.jsx
+
 import logo from "../assets/zormo-logo (2).png";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,7 +12,7 @@ const AdminLogin = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log({ email, password });
+    console.log({ email, password }); 
 
     // Simulating authentication
     if (email === "admin@example.com" && password === "admin123") {
@@ -77,5 +78,4 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
-
 

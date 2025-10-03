@@ -1,42 +1,84 @@
 //backend/server.js
-require('dotenv').config({ path: './.env' });
+require("dotenv").config({ path: "./.env" });
 
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
-const connectDB = require('./dbConfig/db');
+const express = require("express");
+const cors = require("cors");
+const connectDB = require("./dbConfig/db");
 
 // route files
-const authRoutes = require('./routes/authRoutes');
-const adminRoutes = require('./routes/adminRoutes');
-const vendorRoutes = require('./routes/vendorRoutes');
-const userRoutes = require('./routes/userRoutes');
-
+const authRoutes = require("./routes/authRoutes");
+const adminRoutes = require("./routes/adminRoutes");
+const vendorRoutes = require("./routes/vendorRoutes");
+const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+// ✅ Single proper CORS config
+app.use(
+  cors({
+    origin: ["http://localhost:5173"],
+    credentials: true,
+  })
+);
 
 const port = process.env.PORT || 5001;
 
-app.use(cors({
-    origin: [
-        'http://localhost:5173',
-    ],
-    credentials: true,
-}));
-
 // routing
-app.use('/api/auth', authRoutes);
-app.use('/api/admin', adminRoutes);
-app.use('/api/vendor', vendorRoutes);
-app.use('/api/user', userRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/vendor", vendorRoutes);
+app.use("/api/user", userRoutes);
 
+// Db configuration
 connectDB().then(() => {
   app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server is running on port ${port}`);
   });
 });
+
+
+
+
+// require('dotenv').config({ path: './.env' });
+
+// const express = require('express');
+// const cors = require('cors');
+// const dotenv = require('dotenv');
+// const connectDB = require('./dbConfig/db');
+
+// // route files
+// const authRoutes = require('./routes/authRoutes');
+// const adminRoutes = require('./routes/adminRoutes');
+// const vendorRoutes = require('./routes/vendorRoutes');
+// const userRoutes = require('./routes/userRoutes');
+
+
+// const app = express();
+// app.use(express.json());
+// app.use(cors());
+
+// const port = process.env.PORT || 5001;
+
+// app.use(cors({
+//     origin: [
+//         'http://localhost:5173',
+//     ],
+//     credentials: true,
+// }));
+
+// // routing
+// app.use('/api/auth', authRoutes);
+// app.use('/api/admin', adminRoutes);
+// app.use('/api/vendor', vendorRoutes);
+// app.use('/api/user', userRoutes);
+
+// // Db configuration
+// connectDB().then(() => {
+//   app.listen(port, () => {
+//     console.log(`Server running on port ${port}`);
+//   });
+// });
 
 
 

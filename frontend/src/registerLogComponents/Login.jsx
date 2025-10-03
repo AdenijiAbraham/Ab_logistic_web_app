@@ -1,16 +1,21 @@
-// frontend/src/registerLogComponents/LogAsAdmin.jsx
+// Login.jsx
 import logo from "../assets/zormo-logo (2).png";
 import { useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useAuth } from "../contexts/AuthContext";
+import { useForm } from 'react-hook-form';
+import { FaGoogle } from 'react-icons/fa';
+import { MdEmail } from "react-icons/md";
 
 
 
 const Login = () => {
-  const { login } = useAuth();
+  const { login, SignInWithGoogle } = useAuth();
+  //const { loginUser, SignInWithGoogle} = useAuth()
 const [loading, setLoading] = useState(false);
+const [message, setMessage] = useState("");
 const [error, setError] = useState('');
   const [role, setRole] = useState("user"); // Default role
   const [email, setEmail] = useState("");
@@ -56,6 +61,19 @@ const [error, setError] = useState('');
     setLoading(false);
   }
 };
+  
+   const handleGoogleSignIn = async () =>{
+       try {
+           await SignInWithGoogle()
+           alert("Login successful")
+           navigate("/")
+       } catch (error) {
+         setMessage("provide a valid email and password")
+        console.error(error)
+       }
+  }
+
+
   return (
    <div className="container mt-5">
      <Link to="/" className="d-flex align-items-center gap-3 reg_link ">
@@ -113,13 +131,20 @@ const [error, setError] = useState('');
 
         {/* Login Button */}
         <button className="btn btn-primary w-100" onClick={handleLogin}>
-          Login
+          Login 
         </button>
 
         {/* Register Link */}
         <p className="text-center mt-3">
           Do not have an account? <Link className="reg"  to="/vendor-register">Register</Link>
         </p>
+        <div className='col-6'>
+              <button onClick={handleGoogleSignIn}
+               className='btn btn-secondary w-100 d-flex align-items-center justify-content-center'>
+                <FaGoogle className='me-2' />
+                Sign in with google
+              </button>
+            </div>
       </div>
     </div>
    </div>

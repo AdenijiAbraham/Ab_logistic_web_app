@@ -2,6 +2,7 @@ import "../CSS/airfreight.css";
 import '../components/freight_hover.css';
 import {Link} from 'react-router-dom';
 const RoadFreight = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section id="air_freight" className="services_content">

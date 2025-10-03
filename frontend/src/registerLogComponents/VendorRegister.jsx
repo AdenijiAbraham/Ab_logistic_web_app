@@ -177,7 +177,7 @@ const [error, setError] = useState('');
               <button type="submit" className="btn btn-primary w-100">Register</button>
               {/* Register Link */}
         <p className="text-center mt-3">
-          Do not have an account? <Link className="reg" to="/login">Login</Link>
+          Already have an account? <Link className="reg" to="/login">Login</Link>
         </p>
             </form>
           </div>

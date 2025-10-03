@@ -20,6 +20,7 @@ class AuthService {
       throw error.response?.data || { message: 'Registration failed' };
     }
   }
+  
 
   // User Login
   async loginUser(credentials) {

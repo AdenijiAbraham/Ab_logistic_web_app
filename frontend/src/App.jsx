@@ -6,7 +6,7 @@ import "../src/media.css";
 import Home from "./Home";
 import { Route, Routes, useLocation } from "react-router-dom";
 import AbouUs from "./components/AbouUs";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact"; 
 import Services from "./components/Services";
 import Blog from "./components/Blog";
 import Header from "./components/Header";

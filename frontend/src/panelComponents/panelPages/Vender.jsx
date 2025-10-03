@@ -1,4 +1,4 @@
-
+//frontend/src/panelComponents/panelPages/Vender.jsx
 const VendorPanel = () => {
   return (
     <div className="container">
@@ -7,7 +7,7 @@ const VendorPanel = () => {
       <div className="row mt-4">
         <div className="col-md-4">
           <div className="card">
-            <div className="card-body">
+            <div className="card-body"> 
               <h5 className="card-title">Product 1</h5>
               <p className="card-text">Status: In Stock</p>
               <button className="btn btn-danger">Delete</button>

@@ -1,66 +1,95 @@
-#register{
-
-  /* width: 100%; */
-  /* background-image: url('https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&w=600');
-    width: 100%; */
-    .register-container {
-        height: 100vh;
-        background-image: url('https://images.pexels.com/photos/1554646/pexels-photo-1554646.jpeg?auto=compress&cs=tinysrgb&w=600');
-        width: 100%;
-        background-repeat: no-repeat;
-        object-fit: cover;
-        background-size: cover;
-        border: 2px solid black;
-      }
-      
-      .register-card {
-        width: 100%;
-        max-width: 400px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
-      
-      h2 {
-        font-weight: 600;
-        margin-bottom: 20px;
-      }
-      
-      .btn-primary {
-        color: #58bed3;
-        border: none;
-      }
-      
-      .btn-primary:hover {
-        color: #58bed3;
-      }
+/* Fixed CSS for your React component */
+#register.reg {
+  /* Remove any margin/padding that might cause overflow */
+  margin: 0;
+  padding: 0;
 }
 
-.text_as_user{
+.register-container {
+  /* Account for header/navbar space */
+  position: absolute;
+  margin-top: 5%;
+  top: 75px; /* Adjust to your header height */
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  height: calc(100vh - 100px); /* Adjust 100px to match your header height */
+  width: 100%;
+  background-image: url('https://images.pexels.com/photos/1554646/pexels-photo-1554646.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent any overflow */
+  /* Bootstrap classes handle the centering, so we don't need additional flex properties */
+}
+
+.register-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Bootstrap p-4 handles padding, but we can add max-height for safety */
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.text_as_user {
   color: #58bed3;
 }
-.btn-primary {
-  background-color: #58bed3;
-  border: none;
+
+/* Override Bootstrap button styles */
+.btn-secondary {
+  background-color: #58bed3 !important;
+  border-color: #58bed3 !important;
+  color: white !important;
 }
 
-.btn-primary:hover {
-  background-color: #58bed3;
+.btn-secondary:hover {
+  background-color: #4a9fb0 !important;
+  border-color: #4a9fb0 !important;
+  color: white !important;
 }
 
-@media (max-width:576px) {
-  .register .card{
-    width: 400px;
+/* Style the Google sign-in button */
+.bg-secondary {
+  background-color: #58bed3 !important;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #4a9fb0 !important;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+  .register-card {
+    max-width: 350px;
+    margin: 10px;
   }
 }
 
-@media (min-width:577px) {
-  .register .card{
-    width: 600px;
+@media (min-width: 577px) and (max-width: 898px) {
+  .register-card {
+    max-width: 450px;
   }
 }
-@media (min-width:899px) {
-  .register .card{
-    width: 700px;
+
+@media (min-width: 899px) {
+  .register-card {
+    max-width: 500px;
+  }
+}
+
+/* If you have a navbar/header, you might need this */
+@media (max-height: 700px) {
+  .register-container {
+    min-height: calc(100vh - 60px); /* Adjust 60px to your header height */
   }
 }

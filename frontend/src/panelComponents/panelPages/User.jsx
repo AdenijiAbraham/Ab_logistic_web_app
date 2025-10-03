@@ -1,4 +1,4 @@
-
+//frontend/src/panelComponents/panelPages/User.jsx
 const UserPanel = () => {
   return (
     <div className="container">
